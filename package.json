@@ -1,0 +1,23 @@
+{
+  "name": "discordjs-v14-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node": "^16.14.0"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^0.4.0-dev.1648166871.cedd053",
+    "ascii-table": "^0.0.9",
+    "chalk": "^2.4.1",
+    "discord-api-types": "^0.30.0",
+    "discord.js": "^14.0.0-dev.1648166883.cedd053",
+    "ms": "^2.1.3"
+  }
+}
