@@ -20,6 +20,7 @@ npm install discord.js@dev @discordjs/rest ascii-table discord-api-types ms dote
 ```
 Leave the `GUILD_ID` in `.env` file blank if you want to register slash commands globally.
 
+
 Add new secret: `TOKEN`, `CLIENT_ID` and `GUILD_ID` into the environment variables tab (lock icon in sidebar) if you are using replit.
 
 If you are using replit you can remove `require('dotenv').config()` from `index.js` and you don't need to install `dotenv`
