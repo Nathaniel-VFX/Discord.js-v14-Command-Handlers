@@ -22,9 +22,9 @@ Leave the `GUILD_ID` in `.env` file blank if you want to register slash commands
 
 <br />
 
-Add new secret: `TOKEN`, `CLIENT_ID` and `GUILD_ID` into the environment variables tab (lock icon in sidebar) if you are using replit.
+Add new secret: `TOKEN`, `CLIENT_ID` and `GUILD_ID` into the environment variables tab (lock icon in sidebar) if you are using [replit](https://replit.com/).
 
-If you are using replit you can remove `require('dotenv').config()` from `index.js` and you don't need to install `dotenv`
+If you are using [replit](https://replit.com/) you can remove `require('dotenv').config()` from `index.js` and you don't need to install `dotenv`
 
 # Contact
 Discord: `Nathaniel VFX#9090`
