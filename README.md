@@ -15,10 +15,10 @@ Discord.js v14 is still in development, but we can start using the dev version.
 <img src="https://i.imgur.com/8K2MgWQ.png"/>
 
 ## Setup
-run:
 ```
 npm install discord.js@dev @discordjs/rest ascii-table discord-api-types ms dotenv chalk@2.4.1
 ```
+If you are using replit you can remove `require('dotenv').config()` from `index.js` and don't need to install `dotenv`
 
 # Contact
 Discord: `Nathaniel VFX#9090`
