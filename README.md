@@ -11,6 +11,9 @@ Discord.js v14 is still in development, but we can start using the dev version.
 - Permission Handler
 - Cooldowns (No Database)
 
+## Preview
+<img src="https://i.imgur.com/8K2MgWQ.png"/>
+
 ## Setup
 If you decide to fork this repository fully, run:
 ```
