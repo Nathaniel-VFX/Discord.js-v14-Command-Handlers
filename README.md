@@ -1,4 +1,4 @@
-# Discord.js-v14-Command-Handlers
+# Discord.js v14 Command-Handlers
 Commands, Events, Permissions and Cooldown Handlers for Discord.js v14 bot ~ Made by Nathaniel
 
 ## Discord.js v14 (dev version)
