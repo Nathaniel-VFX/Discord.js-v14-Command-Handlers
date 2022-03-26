@@ -11,8 +11,8 @@ const client = new Client({
 });
 
 const config = require('./config.json');
+require('dotenv').config() // remove this line if you are replit user
 
-/* ------------------ COLLECTIONS ------------------ */
 client.commands = new Collection()
 client.aliases = new Collection()
 client.events = new Collection();
