@@ -8,7 +8,7 @@ const client = new Client({
 		GatewayIntentBits.DirectMessages,
 		GatewayIntentBits.MessageContent
 	], 
-	partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember] 
+	partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.GuildPresences] 
 });
 
 const config = require('./config.json');
