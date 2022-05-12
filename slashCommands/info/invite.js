@@ -15,12 +15,12 @@ module.exports = {
 		.setFooter({ text: client.user.tag })
 
 		const actionRow = new ActionRowBuilder()
-		.addComponents(
+		.addComponents([
 			new ButtonBuilder()
 			.setLabel('Invite')
 			.setURL('https://discord.com/api/oauth2/authorize?client_id=956880462767341598&permissions=8&scope=bot%20applications.commands')
 			.setStyle(5)
-		)
+		])
 		interaction.reply({ embeds: [embed], components: [actionRow] })
 	}
 };
