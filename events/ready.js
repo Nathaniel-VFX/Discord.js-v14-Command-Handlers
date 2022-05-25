@@ -3,8 +3,8 @@ const chalk = require('chalk')
 
 client.on("ready", () => {
 	const activities = [
-		{ name: `${client.channels.cache.size} Channels`, type: 0 }, // PLAYING
 		{ name: `${client.guilds.cache.size} Servers`, type: 2 }, // LISTENING
+		{ name: `${client.channels.cache.size} Channels`, type: 0 }, // PLAYING
 		{ name: `${client.users.cache.size} Users`, type: 3 }, // WATCHING
 		{ name: `Discord.js v14`, type: 5 } // COMPETING
 	];
