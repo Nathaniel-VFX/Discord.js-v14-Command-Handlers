@@ -4,12 +4,13 @@ module.exports = {
 	name: 'invite',
 	description: "Get the bot's invite link",
 	cooldown: 3000,
-	userPerms: [],
-	botPerms: [],
+	userPerms: ['Administrator'],
+	botPerms: ['Administrator'],
 	run: async (client, message, args) => {
+		const inviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;
 		const embed = new EmbedBuilder()
 		.setTitle('Invite me')
-		.setDescription('Invite the bot to your server. [Click here](https://discord.com/api/oauth2/authorize?client_id=956880462767341598&permissions=8&scope=bot%20applications.commands)')
+		.setDescription(`Invite the bot to your server. [Click here](${inviteUrl})`)
 		.setColor('#03fcdb')
 		.setTimestamp()
 		.setThumbnail(client.user.displayAvatarURL())
@@ -19,7 +20,7 @@ module.exports = {
 		.addComponents([
 			new ButtonBuilder()
 			.setLabel('Invite')
-			.setURL('https://discord.com/api/oauth2/authorize?client_id=956880462767341598&permissions=8&scope=bot%20applications.commands')
+			.setURL(inviteUrl)
 			.setStyle(5)
 		])
 		message.reply({ embeds: [embed], components: [actionRow] })
