@@ -19,11 +19,21 @@ module.exports = (client) => {
 
 		for(const file of files) {
 				const slashCommand = require(`../slashCommands/${dir}/${file}`);
-				slashCommands.push({
-					name: slashCommand.name,
-					description: slashCommand.description,
-					type: slashCommand.type,
-				});
+				if(!slashCommand.options) {
+					slashCommands.push({
+						name: slashCommand.name,
+						description: slashCommand.description,
+						type: slashCommand.type,
+					});
+				}
+				if(slashCommand.options) {
+					slashCommands.push({
+						name: slashCommand.name,
+						description: slashCommand.description,
+						type: slashCommand.type,
+						options: slashCommand.options
+					});
+				}
 			
 				if(slashCommand.name) {
 						client.slashCommands.set(slashCommand.name, slashCommand)
