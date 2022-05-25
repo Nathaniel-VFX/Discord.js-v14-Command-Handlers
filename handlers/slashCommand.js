@@ -42,8 +42,9 @@ module.exports = (client) => {
 						table.addRow(file.split('.js')[0], '⛔')
 				}
 		}
-		console.log(chalk.red(table.toString()))
+		
 	});
+	console.log(chalk.red(table.toString()));
 
 	(async () => {
 			try {
