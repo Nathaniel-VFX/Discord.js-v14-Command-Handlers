@@ -24,7 +24,6 @@ module.exports = (client) => {
 					description: slashCommand.description,
 					type: slashCommand.type,
 				});
-				// cooldown: slashCommand.cooldown ? slashCommand.cooldown : 0
 			
 				if(slashCommand.name) {
 						client.slashCommands.set(slashCommand.name, slashCommand)
