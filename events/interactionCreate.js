@@ -4,8 +4,15 @@ const cooldown = new Collection()
 const ms = require('ms')
 
 client.on('interactionCreate', async interaction => {
+	const slashCommand = client.slashCommands.get(interaction.commandName);
+		if (interaction.isAutocomplete()) {
+			if(slashCommand.autocomplete) {
+			  const choices = [];
+			  await slashCommand.autocomplete(interaction, choices)
+			}
+		}
 		if (!interaction.isCommand()) return;
-		const slashCommand = client.slashCommands.get(interaction.commandName);
+	
 		if(!slashCommand) return client.slashCommands.delete(interaction.commandName);
 		try {
 			if(slashCommand.cooldown) {
@@ -27,11 +34,11 @@ client.on('interactionCreate', async interaction => {
 
 				}
 
-					await slashCommand.run(client, interaction);
-					cooldown.set(`slash-${slashCommand.name}${interaction.user.id}`, Date.now() + slashCommand.cooldown)
-					setTimeout(() => {
-							cooldown.delete(`slash-${slashCommand.name}${interaction.user.id}`)
-					}, slashCommand.cooldown)
+				await slashCommand.run(client, interaction);
+				cooldown.set(`slash-${slashCommand.name}${interaction.user.id}`, Date.now() + slashCommand.cooldown)
+				setTimeout(() => {
+					cooldown.delete(`slash-${slashCommand.name}${interaction.user.id}`)
+				}, slashCommand.cooldown)
 			} else {
 				if(slashCommand.userPerms || slashCommand.botPerms) {
 					if(!interaction.memberPermissions.has(PermissionsBitField.resolve(slashCommand.userPerms || []))) {
@@ -48,9 +55,9 @@ client.on('interactionCreate', async interaction => {
 					}
 
 				}
-					await slashCommand.run(client, interaction);
+				await slashCommand.run(client, interaction);
 			}
 		} catch (error) {
-				console.log(error);
+			console.log(error);
 		}
 });
