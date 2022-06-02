@@ -5,7 +5,7 @@ module.exports = {
 	description: "Manage roles of the server or members.",
 	cooldown: 3000,
 	type: ApplicationCommandType.ChatInput,
-    default_member_permissions: 'ManageRoles',
+    	default_member_permissions: 'ManageRoles', // permission required
 	options: [
         {
             name: 'add',
@@ -28,7 +28,7 @@ module.exports = {
         }
     ],
 	run: async (client, interaction) => {
-        if(interaction.options._subcommand === 'add') {
+	 if(interaction.options._subcommand === 'add') {
             try {
                 const member = interaction.guild.members.cache.get(interaction.options.get('user').value);
                 const role = interaction.options.get('role').role;
@@ -48,5 +48,5 @@ module.exports = {
             }
 
         }
-	}
+    }
 };
