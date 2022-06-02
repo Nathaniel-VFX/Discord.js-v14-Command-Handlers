@@ -1,10 +1,12 @@
 const fs = require('fs');
-const chalk = require('chalk')
+const chalk = require('chalk');
+
+const { PermissionsBitField } = require('discord.js');
+const { Routes } = require('discord-api-types/v9');
 const { REST } = require('@discordjs/rest')
-const { Routes } = require('discord-api-types/v9')
-const AsciiTable = require('ascii-table')
-const table = new AsciiTable()
-table.setHeading('Slash Commands', 'Stats').setBorder('|', '=', "0", "0")
+
+const AsciiTable = require('ascii-table');
+const table = new AsciiTable().setHeading('Slash Commands', 'Stats').setBorder('|', '=', "0", "0")
 
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
@@ -19,21 +21,14 @@ module.exports = (client) => {
 
 		for(const file of files) {
 				const slashCommand = require(`../slashCommands/${dir}/${file}`);
-				if(!slashCommand.options) {
-					slashCommands.push({
-						name: slashCommand.name,
-						description: slashCommand.description,
-						type: slashCommand.type,
-					});
-				}
-				if(slashCommand.options) {
-					slashCommands.push({
-						name: slashCommand.name,
-						description: slashCommand.description,
-						type: slashCommand.type,
-						options: slashCommand.options
-					});
-				}
+				slashCommands.push({
+					name: slashCommand.name,
+					description: slashCommand.description,
+					type: slashCommand.type,
+					options: slashCommand.options ? slashCommand.options : null,
+					default_permission: slashCommand.default_permission ? slashCommand.default_permission : null,
+					default_member_permissions: slashCommand.default_member_permissions ? PermissionsBitField.resolve(slashCommand.default_member_permissions).toString() : null
+				});
 			
 				if(slashCommand.name) {
 						client.slashCommands.set(slashCommand.name, slashCommand)
