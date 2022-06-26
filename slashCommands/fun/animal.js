@@ -3,7 +3,6 @@ const { EmbedBuilder, ApplicationCommandType } = require('discord.js');
 module.exports = {
 	name: 'animal',
 	description: "A test command for showing autocomplete slash command.",
-	cooldown: 3000,
 	type: ApplicationCommandType.ChatInput,
 	options: [
         {
@@ -29,6 +28,6 @@ module.exports = {
     },
 	run: async (client, interaction) => {
         const animal = interaction.options.get('animal').value;
-        interaction.reply({ content: `${interaction.user}, You chose **${animal}**!` });
+        if(animal) interaction.reply({ content: `${interaction.user}, You chose **${animal}**!` });
 	}
 };
