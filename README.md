@@ -1,6 +1,15 @@
 # Discord.js v14 Command-Handlers
 Commands, Events, Permissions and Cooldown Handlers for Discord.js v14 bot ~ Made by Nathaniel
 
+<a href="https://nodejs.org/en/download/">
+   <img src="https://img.shields.io/badge/node-16.9.x-brightgreen.svg" alt="node.py">
+</a>
+
+<a href="https://github.com/discordjs/discord.js/">
+   <img src="https://img.shields.io/badge/discord.js-@dev-blue.svg" alt="discord.js">
+</a>
+
+  
 ## Discord.js v14 (dev version)
 Discord.js v14 is still in development, but we can start using the dev version.
 
