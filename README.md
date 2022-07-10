@@ -46,12 +46,14 @@
    <img src="https://img.shields.io/github/followers/Nathaniel-VFX?label=Follow&logo=github&style=social" alt="github-follow">
 </a>
   
-</p> 
+</p>
+
+<br>
    
 ## Discord.js v14 (dev version)
 Discord.js v14 is still in development, but we can start using the dev version.
 
-# Handlers
+# Features
 - Commands Handler (aliases, permissions)
 - Slash Commands Handler (options, choices, autocomplete, permissions)
 - Events Handler (messageCreate, interactionCreate, ready)
@@ -61,7 +63,7 @@ Discord.js v14 is still in development, but we can start using the dev version.
 ## Preview
 <img src="https://i.imgur.com/8K2MgWQ.png"/>
 
-## Installation
+## Installation & Setup
 ```
 npm install discord.js@dev @discordjs/rest ascii-table discord-api-types ms dotenv chalk@2.4.1
 ```
@@ -74,12 +76,17 @@ Add new secret: `TOKEN`, `CLIENT_ID` and `GUILD_ID` into the environment variabl
 If you are using [replit](https://replit.com/) you can remove `require('dotenv').config()` from `index.js` and you don't need to install `dotenv`
 
 ---
-
-# Contact
-Discord: `Nathaniel VFX#9090`
-
 ## Made by Nathaniel (Nathaniel VFX#9090)
-These command handlers are made by Nathaniel (Nathaniel VFX#9090)
+These command handlers are made by Nathaniel (Nathaniel VFX#8080)
+
+**⭐ Remember to star the repository if you like it! ⭐**
+
+_**Please give me proper credit when you use it, especially if you want to edit and post to public.**_
+
+---
+
+## Contact
+Discord: `Nathaniel VFX#9090`
 
 If you have any problem, feel free to contact me. 😉
 
