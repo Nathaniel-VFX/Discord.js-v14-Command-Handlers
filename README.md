@@ -49,9 +49,7 @@
 </p>
 
 <br>
-   
-## Discord.js v14 (dev version)
-Discord.js v14 is still in development, but we can start using the dev version.
+
 
 # Features
 - Commands Handler (aliases, permissions)
