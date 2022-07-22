@@ -1,8 +1,10 @@
-const client = require('..')
 const { EmbedBuilder, Collection, PermissionsBitField } = require('discord.js')
-const ms = require('ms')
+const ms = require('ms');
+const client = require('..');
+const config = require('../config.json');
+
 const prefix = client.prefix;
-const cooldown = new Collection()
+const cooldown = new Collection();
 
 client.on('messageCreate', async message => {
 	if(message.author.bot) return;
@@ -16,7 +18,7 @@ client.on('messageCreate', async message => {
 	
 	if(command) {
 		if(command.cooldown) {
-				if(cooldown.has(`${command.name}${message.author.id}`)) return message.channel.send({ content: `You are on \`${ms(cooldown.get(`${command.name}${message.author.id}`) - Date.now(), {long : true})}\` cooldown!`})
+				if(cooldown.has(`${command.name}${message.author.id}`)) return message.channel.send({ content: config.messages["COOLDOWN_MESSAGE"].replace('<duration>', ms(cooldown.get(`${command.name}${message.author.id}`) - Date.now(), {long : true}) ) });
 				if(command.userPerms || command.botPerms) {
 					if(!message.member.permissions.has(PermissionsBitField.resolve(command.userPerms || []))) {
 						const userPerms = new EmbedBuilder()
