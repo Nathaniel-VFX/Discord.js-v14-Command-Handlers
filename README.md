@@ -9,7 +9,7 @@
 </a>
 
 <a href="https://github.com/discordjs/discord.js/">
-   <img src="https://img.shields.io/badge/discord.js-@dev-blue?style=for-the-badge" alt="discord.js">
+   <img src="https://img.shields.io/badge/discord.js-v14-blue?style=for-the-badge" alt="discord.js">
 </a>
 
 <a href="https://github.com/Nathaniel-VFX/Discord.js-v14-Command-Handlers">
