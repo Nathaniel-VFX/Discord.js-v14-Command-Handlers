@@ -55,7 +55,7 @@
 - Commands Handler (aliases, permissions)
 - Slash Commands Handler (options, choices, autocomplete, permissions)
 - Events Handler (messageCreate, interactionCreate, ready)
-- Permission Handler
+- Permission Handler (commands, slash commands)
 - Cooldowns (No Database)
 
 ## Preview
@@ -63,7 +63,7 @@
 
 ## Installation & Setup
 ```
-npm install discord.js@dev @discordjs/rest ascii-table discord-api-types ms dotenv chalk@2.4.1
+npm install discord.jsv14 @discordjs/rest ascii-table discord-api-types ms dotenv chalk@2.4.1
 ```
 Leave the `GUILD_ID` in `.env` file blank if you want to register slash commands globally.
 
