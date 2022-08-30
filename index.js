@@ -22,7 +22,7 @@ client.prefix = config.prefix
 module.exports = client;
 
 
-['command', 'slashCommand', 'events'].forEach((handler) => {
+fs.readdirSync('./handlers').forEach((handler) => {
   require(`./handlers/${handler}`)(client)
 });
 
