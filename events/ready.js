@@ -1,12 +1,13 @@
-const client = require('..')
-const chalk = require('chalk')
+const { ActivityType } = require('discord.js');
+const client = require('..');
+const chalk = require('chalk');
 
 client.on("ready", () => {
 	const activities = [
-		{ name: `${client.guilds.cache.size} Servers`, type: 2 }, // LISTENING
-		{ name: `${client.channels.cache.size} Channels`, type: 0 }, // PLAYING
-		{ name: `${client.users.cache.size} Users`, type: 3 }, // WATCHING
-		{ name: `Discord.js v14`, type: 5 } // COMPETING
+		{ name: `${client.guilds.cache.size} Servers`, type: ActivityType.Listening },
+		{ name: `${client.channels.cache.size} Channels`, type: ActivityType.Playing },
+		{ name: `${client.users.cache.size} Users`, type: ActivityType.Watching },
+		{ name: `Discord.js v14`, type: ActivityType.Competing }
 	];
 	const status = [
 		'online',
