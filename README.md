@@ -55,6 +55,7 @@
 - Commands Handler (aliases, permissions)
 - Slash Commands Handler (options, choices, autocomplete, permissions)
 - Events Handler (messageCreate, interactionCreate, ready)
+- Button Handler (custom ID, permissions)
 - Permission Handler (commands, slash commands)
 - Cooldowns (No Database)
 
