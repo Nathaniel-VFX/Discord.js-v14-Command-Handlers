@@ -17,7 +17,8 @@ require('dotenv').config() // remove this line if you are using replit
 client.commands = new Collection()
 client.aliases = new Collection()
 client.slashCommands = new Collection();
-client.prefix = config.prefix
+client.buttons = new Collection();
+client.prefix = config.prefix;
 
 module.exports = client;
 
