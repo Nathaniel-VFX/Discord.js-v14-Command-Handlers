@@ -75,7 +75,7 @@ Add new secret: `TOKEN`, `CLIENT_ID` and `GUILD_ID` into the environment variabl
 If you are using [replit](https://replit.com/) you can remove `require('dotenv').config()` from `index.js` and you don't need to install `dotenv`
 
 ---
-## Made by Nathaniel (Nathaniel VFX#9090)
+## Made by Nathaniel (Nathaniel VFX#8080)
 These command handlers are made by Nathaniel (Nathaniel VFX#8080)
 
 **⭐ Remember to star the repository if you like it! ⭐**
