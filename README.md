@@ -85,7 +85,7 @@ _**Please give me proper credit when you use it, especially if you want to edit 
 ---
 
 ## Contact
-Discord: `Nathaniel VFX#9090`
+Discord: `Nathaniel VFX#8080`
 
 If you have any problem, feel free to contact me. 😉
 
