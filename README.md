@@ -64,7 +64,7 @@
 
 ## Installation & Setup
 ```
-npm install discord.jsv14 @discordjs/rest ascii-table discord-api-types ms dotenv chalk@2.4.1
+npm install discord.js@latest @discordjs/rest ascii-table discord-api-types ms dotenv chalk@2.4.1
 ```
 Leave the `GUILD_ID` in `.env` file blank if you want to register slash commands globally.
 
