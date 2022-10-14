@@ -7,7 +7,7 @@ table.setHeading('Commands', 'Stats').setBorder('|', '=', "0", "0")
 module.exports = (client) => {
 	fs.readdirSync('./commands/').forEach(dir => {
 		const files = fs.readdirSync(`./commands/${dir}/`).filter(file => file.endsWith('.js'));
-		if(!files || files.legnth <= 0) console.log(chalk.red("Commands - 0"))
+		if(!files || files.length <= 0) console.log(chalk.red("Commands - 0"))
 				files.forEach((file) => {
 						let command = require(`../commands/${dir}/${file}`)
 						if(command) {
